@@ -49,7 +49,9 @@ resource "azurerm_linux_web_app" "web_app" {
 
   site_config {
     always_on = true
-    linux_fx_version = "PYTHON|3.11"
+    application_stack {
+      python_version = "3.11"
+    }
   }
 
   identity {
